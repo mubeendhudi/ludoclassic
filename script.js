@@ -42,6 +42,8 @@ function beep(f, d = .08, t = 'sine') {
     } catch (e) { }
 }
 
+const FACES = [[4], [0, 8], [0, 4, 8], [0, 2, 6, 8], [0, 2, 4, 6, 8], [0, 2, 3, 5, 6, 8]];
+
 /* ===== Build board ===== */
 (function build() {
     const g = $('#grid'), map = {};
@@ -93,7 +95,6 @@ function beep(f, d = .08, t = 'sine') {
     }
 })();
 
-const FACES = [[4], [0, 8], [0, 4, 8], [0, 2, 6, 8], [0, 2, 4, 6, 8], [0, 2, 3, 5, 6, 8]];
 function face(c, n) { [...$('#d' + c).children].forEach((u, i) => u.className = FACES[n - 1].includes(i) ? 'd' : '') }
 
 /* ===== Rendering ===== */

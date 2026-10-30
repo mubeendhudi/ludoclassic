@@ -482,9 +482,10 @@ li {
     inset: 0;
     background: #050a14dd;
     display: grid;
-    place-items: center;
+    place-items: safe center;
     z-index: 50;
-    padding: 16px
+    padding: 16px;
+    overflow-y: auto
 }
 
 .ov.hide {
