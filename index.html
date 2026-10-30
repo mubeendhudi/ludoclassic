@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Ludo Classic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1><span>LUDO</span> Classic</h1>
+            <div><button id="snd" aria-label="Sound">🔊</button> <button id="newg">New game</button></div>
+        </header>
+        <div id="wrap">
+            <div id="board">
+                <div id="grid"></div>
+                <div id="tokens"></div>
+            </div>
+            <aside>
+                <div id="cards"></div>
+                <div id="dicebox"><button id="dice" aria-label="Roll dice"></button>
+                    <div id="msg">Welcome!</div>
+                </div>
+                <details>
+                    <summary>How to play</summary>
+                    <ul>
+                        <li>Roll a <b>6</b> to bring a token out of its yard.</li>
+                        <li>Rolling a 6, capturing an opponent or reaching home gives an extra roll.</li>
+                        <li>Three 6s in a row cancel your turn.</li>
+                        <li>Landing on an opponent sends their token back to the yard, except on safe squares (★ and
+                            start squares).</li>
+                        <li>Reach the centre with an exact roll. First player to bring all 4 tokens home wins.</li>
+                        <li>Tap the dice (or press Space) to roll, then tap a glowing token.</li>
+                    </ul>
+                </details>
+            </aside>
+        </div>
+    </main>
+    <div id="ov" class="ov">
+        <div class="modal">
+            <h2>🎲 Ludo Classic</h2>
+            <p>Choose who plays each colour (min. 2 players).</p>
+            <div id="setup"></div>
+            <div id="err"></div><button class="go" id="start">Start game</button>
+        </div>
+    </div>
+    <div id="win" class="ov hide">
+        <div class="modal">
+            <h2 id="wt">🏆</h2>
+            <p id="wp"></p><button class="go" id="again">Play again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
